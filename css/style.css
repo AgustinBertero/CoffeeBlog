@@ -3,6 +3,7 @@
     --fuenteParrafos: 'Open Sans', sans-serif;
 
     --primario: #8d4925;
+    --gris: #e1e1e1;
     --blanco: #ffffffff;
     --negro: #000000;
     
@@ -126,3 +127,45 @@ img{
     color: var(--blanco);
 }
 
+
+@media (min-width: 768px){
+     .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr ;
+        column-gap: 4rem;
+    }
+}
+
+.entrada{
+    border-bottom: 1px solid var(--gris); /*Borde solo en la parte inferior*/
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{ /*Seleccion el ultimo elemento con clase .entrada*/
+    border: none; /*Elimino border*/
+    margin-bottom: 0;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px){
+    .boton{
+        display: inline-block;/*Si respeta margin y width. Se usa poco*/ 
+
+        
+    }
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
