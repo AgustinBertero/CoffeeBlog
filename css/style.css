@@ -223,8 +223,20 @@ font-size: 2rem;
 
 .footer{
     background-color: var(--negro);
-    padding: 3rem ;
+    padding-bottom: 3rem ;
     margin-top: 4rem;
+}
+
+/**Sobre nosotros**/ 
+@media (min-width: 768px){
+       .sobre-nosotros{ /*Asi se lo hace con GRID. Cuando tenga que acomodar elementos siempre usar GRID*/
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+     }
+}
+
+
 /**Cursos**/
 
 .curso{
