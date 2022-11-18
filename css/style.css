@@ -169,14 +169,18 @@ img{
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
 }
 
 @media (min-width: 768px){
     .boton{
         display: inline-block;/*Si respeta margin y width. Se usa poco*/ 
-
-        
+       
     }
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 .boton--primario{
@@ -208,7 +212,7 @@ img{
 }
 
 .widget-curso__info{
-    font-weight: 400;
+    font-weight: normal;
 }
 
 .widget-curso__label, 
@@ -221,4 +225,39 @@ font-size: 2rem;
     background-color: var(--negro);
     padding: 3rem ;
     margin-top: 4rem;
+/**Contacto**/
+
+.contacto-bg{ /*Contacto background*/
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/**Formulario**/
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto ; /**Primer parametro es hacia arriba, negativo para que el form ocupe un espacio del elemento de arriba*/
+    width: 95%; /**Con esto se encima al elemento de arriba**/
+    padding: 5rem; /**Le doy espacio en todas las direcciones**/
+}
+
+.campo{
+    display: flex;  /**Le doy display flex al contenedor padre, le doy acceso a las propiedades a los hijos **/
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+.campo__label{
+    flex: 0 0 9rem;/**Hace que el campo no crezca , deja fijo el tamaño en 9rem**/
+    text-align: right;
+}
+
+.campo__field{
+    flex: 1;  /**Extiende los campos a lo largo del form**/
+    border: 1px solid var(--gris);
+} 
+
+.campo__field--textarea{
+    height: 20rem;
 }
